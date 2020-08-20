@@ -4,12 +4,11 @@
 
 using namespace std;
 
-vector<string> MoveStrings(vector<string>& a, vector<string>& b) {
+void MoveStrings(vector<string>& a, vector<string>& b) {
     for (auto x : a) {
         b.push_back(x);
     }
     a.clear();
-    return b;
 }
 
 int main() {
