@@ -9,17 +9,11 @@ bool IsPalindrom(std::string pal) {
     reverse(begin(pal), end(pal));
     if (pal == eq) {
         return true;
-    } else {
-        return false;
     }
 }
 
 
-std::vector<std::string> PalindromFilter(std::vector<std::string> words) {
-    std::string x;
-    std::string y;
-    int minLength;
-    std::cin >> minLength;
+std::vector<std::string> PalindromFilter(std::vector<std::string> words, int minLength) {
     for (std::string c : words) {
         if (IsPalindrom(c)) {
             if (minLength <= c.size()) {
@@ -34,12 +28,17 @@ std::vector<std::string> PalindromFilter(std::vector<std::string> words) {
 }
 
 int main() {
-    std::vector<std::string> words = {};
-    PalindromFilter(words);
-    std::string x;
-    std::string y;
-    std::cin >> x >> y;
-    words.push_back(x);
-    words.push_back(y);
+    int n;
+    std::cin >> n;
+    std::vector<std::string> words;
+    for (int i = 0; i < n; ++i) {
+        std::string s;
+        std::cin >> s;
+        words.push_back(s);
+    }
+    int ml;
+    std::cin >> ml;
+    PalindromFilter(words, ml);
+
     return 0;
 }
