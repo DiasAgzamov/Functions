@@ -1,10 +1,8 @@
 #include <iostream>
-//#include <string>
 
 void UpdateIfGreater(int first, int &second) {
-    auto tmp = first;
     if (first > second) {
-        second = tmp;
+        second = first;
     }
 }
 
