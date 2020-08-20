@@ -8,9 +8,7 @@ bool IsPalindrom(std::string pal) {
     reverse(begin(pal), end(pal));
     if (pal == eq) {
         return true;
-    } else {
-        return false;
-    }
+    } 
 }
 
 int main() {
