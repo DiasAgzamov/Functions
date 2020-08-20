@@ -3,7 +3,12 @@
 #include <algorithm>
 
 void Reverse(std::vector<int>& numbers){
-    reverse(begin(numbers), end(numbers));
+    //reverse(begin(numbers), end(numbers));
+    std::vector<int> srebmun;
+    for(int i = numbers.size(); i >= 0; --i){
+        srebmun.push_back(numbers [i]);
+    }
+    numbers = srebmun;
 }
 
 
