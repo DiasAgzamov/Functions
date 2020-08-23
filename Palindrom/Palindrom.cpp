@@ -3,12 +3,12 @@
 #include <algorithm>
 
 bool IsPalindrom(std::string pal) {
-    std::string eq;
-    eq = pal;
-    reverse(begin(pal), end(pal));
-    if (pal == eq) {
-        return true;
-    } 
+    for (int i = 0; i < pal.length() / 2; ++i) {
+        if (pal[i] != pal[pal.length() - i - 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 int main() {
